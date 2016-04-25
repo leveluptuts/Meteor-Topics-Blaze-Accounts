@@ -1,0 +1,9 @@
+<template name="AppLayout">
+    {{> Header}}
+    {{#if isInRole 'admin'}}
+    	{{> AppNav}}
+    {{/if}}
+    <main class="app-layout">
+        {{> Template.dynamic template=main}}
+    </main>
+</template>
